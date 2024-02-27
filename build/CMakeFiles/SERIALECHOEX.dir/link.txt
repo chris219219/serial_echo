@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/SERIALECHOEX.dir/serialecho.c.o -o serialecho  -static-libgcc -static-libstdc++ 

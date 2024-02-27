@@ -1,0 +1,4 @@
+/home/INTRANET.SALZ.GMBH/christopher.tan/code-projects/serial_echo/build/CMakeFiles/SERIALECHOEX.dir
+/home/INTRANET.SALZ.GMBH/christopher.tan/code-projects/serial_echo/build/CMakeFiles/SERIALSENDEX.dir
+/home/INTRANET.SALZ.GMBH/christopher.tan/code-projects/serial_echo/build/CMakeFiles/edit_cache.dir
+/home/INTRANET.SALZ.GMBH/christopher.tan/code-projects/serial_echo/build/CMakeFiles/rebuild_cache.dir

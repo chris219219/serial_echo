@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/SERIALSENDEX.dir/serialsend.c.o -o serialsend  -static-libgcc -static-libstdc++ 

@@ -10,8 +10,8 @@
 #include <signal.h>
 #include <time.h>
 
-#include "./inc/print.h"
-#include "./inc/serial.h"
+#define SERIAL_IMPL_H
+#include "serial.h"
 
 static volatile sig_atomic_t run = 1;
 
@@ -271,22 +271,13 @@ int main(int argc, char **argv)
         exit(EXIT_FAILURE);
     }
 
-    const struct timespec slowdown = { 0, 10000000 }; // 10ms
-
-    print_verbose("\nEchoing...\n");
+    print_verbose("\nType characters!\n");
     while (run)
     {
-        char buf[1];
-        size_t bytes_r = read_tty(&device, buf, 1);
-        if (bytes_r == 0)
-        {
-            nanosleep(&slowdown, NULL);
-            continue;
-        }
-        printf("%c", *buf);
-        fflush(stdout);
+        uint8_t c = getchar();
+        write_tty(&device, &c, 1);
     }
-    print_ok("\nEcho stopped.\n");
+    print_ok("\nStopped.\n");
 
     print_verbose("\nClosing device...\n");
     success = close_tty(&device);
